@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		1881001B2DBB9D3A003322F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1881FFFC2DBB9D30003322F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 188100032DBB9D30003322F2;
+			remoteInfo = VoyageCabin;
+		};
+		188100252DBB9D3A003322F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1881FFFC2DBB9D30003322F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 188100032DBB9D30003322F2;
+			remoteInfo = VoyageCabin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		188100042DBB9D30003322F2 /* VoyageCabin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoyageCabin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1881001A2DBB9D3A003322F2 /* VoyageCabinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoyageCabinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		188100242DBB9D3A003322F2 /* VoyageCabinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoyageCabinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1881002C2DBB9D3A003322F2 /* Exceptions for "VoyageCabin" folder in "VoyageCabin" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 188100032DBB9D30003322F2 /* VoyageCabin */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		188100062DBB9D30003322F2 /* VoyageCabin */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1881002C2DBB9D3A003322F2 /* Exceptions for "VoyageCabin" folder in "VoyageCabin" target */,
+			);
+			path = VoyageCabin;
+			sourceTree = "<group>";
+		};
+		1881001D2DBB9D3A003322F2 /* VoyageCabinTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoyageCabinTests;
+			sourceTree = "<group>";
+		};
+		188100272DBB9D3A003322F2 /* VoyageCabinUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoyageCabinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		188100012DBB9D30003322F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		188100172DBB9D3A003322F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		188100212DBB9D3A003322F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		188100052DBB9D30003322F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				188100042DBB9D30003322F2 /* VoyageCabin.app */,
+				1881001A2DBB9D3A003322F2 /* VoyageCabinTests.xctest */,
+				188100242DBB9D3A003322F2 /* VoyageCabinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1881FFFB2DBB9D2F003322F2 = {
+			isa = PBXGroup;
+			children = (
+				188100062DBB9D30003322F2 /* VoyageCabin */,
+				1881001D2DBB9D3A003322F2 /* VoyageCabinTests */,
+				188100272DBB9D3A003322F2 /* VoyageCabinUITests */,
+				188100052DBB9D30003322F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		188100032DBB9D30003322F2 /* VoyageCabin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1881002D2DBB9D3A003322F2 /* Build configuration list for PBXNativeTarget "VoyageCabin" */;
+			buildPhases = (
+				188100002DBB9D30003322F2 /* Sources */,
+				188100012DBB9D30003322F2 /* Frameworks */,
+				188100022DBB9D30003322F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				188100062DBB9D30003322F2 /* VoyageCabin */,
+			);
+			name = VoyageCabin;
+			packageProductDependencies = (
+			);
+			productName = VoyageCabin;
+			productReference = 188100042DBB9D30003322F2 /* VoyageCabin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		188100192DBB9D3A003322F2 /* VoyageCabinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 188100322DBB9D3A003322F2 /* Build configuration list for PBXNativeTarget "VoyageCabinTests" */;
+			buildPhases = (
+				188100162DBB9D3A003322F2 /* Sources */,
+				188100172DBB9D3A003322F2 /* Frameworks */,
+				188100182DBB9D3A003322F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1881001C2DBB9D3A003322F2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1881001D2DBB9D3A003322F2 /* VoyageCabinTests */,
+			);
+			name = VoyageCabinTests;
+			packageProductDependencies = (
+			);
+			productName = VoyageCabinTests;
+			productReference = 1881001A2DBB9D3A003322F2 /* VoyageCabinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		188100232DBB9D3A003322F2 /* VoyageCabinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 188100352DBB9D3A003322F2 /* Build configuration list for PBXNativeTarget "VoyageCabinUITests" */;
+			buildPhases = (
+				188100202DBB9D3A003322F2 /* Sources */,
+				188100212DBB9D3A003322F2 /* Frameworks */,
+				188100222DBB9D3A003322F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				188100262DBB9D3A003322F2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				188100272DBB9D3A003322F2 /* VoyageCabinUITests */,
+			);
+			name = VoyageCabinUITests;
+			packageProductDependencies = (
+			);
+			productName = VoyageCabinUITests;
+			productReference = 188100242DBB9D3A003322F2 /* VoyageCabinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1881FFFC2DBB9D30003322F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					188100032DBB9D30003322F2 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					188100192DBB9D3A003322F2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 188100032DBB9D30003322F2;
+					};
+					188100232DBB9D3A003322F2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 188100032DBB9D30003322F2;
+					};
+				};
+			};
+			buildConfigurationList = 1881FFFF2DBB9D30003322F2 /* Build configuration list for PBXProject "VoyageCabin" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1881FFFB2DBB9D2F003322F2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 188100052DBB9D30003322F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				188100032DBB9D30003322F2 /* VoyageCabin */,
+				188100192DBB9D3A003322F2 /* VoyageCabinTests */,
+				188100232DBB9D3A003322F2 /* VoyageCabinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		188100022DBB9D30003322F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		188100182DBB9D3A003322F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		188100222DBB9D3A003322F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		188100002DBB9D30003322F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		188100162DBB9D3A003322F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		188100202DBB9D3A003322F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1881001C2DBB9D3A003322F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 188100032DBB9D30003322F2 /* VoyageCabin */;
+			targetProxy = 1881001B2DBB9D3A003322F2 /* PBXContainerItemProxy */;
+		};
+		188100262DBB9D3A003322F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 188100032DBB9D30003322F2 /* VoyageCabin */;
+			targetProxy = 188100252DBB9D3A003322F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1881002E2DBB9D3A003322F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VoyageCabin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewisestudios.VoyageCabin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1881002F2DBB9D3A003322F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VoyageCabin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewisestudios.VoyageCabin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		188100302DBB9D3A003322F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		188100312DBB9D3A003322F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		188100332DBB9D3A003322F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewisestudios.VoyageCabinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoyageCabin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoyageCabin";
+			};
+			name = Debug;
+		};
+		188100342DBB9D3A003322F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewisestudios.VoyageCabinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoyageCabin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoyageCabin";
+			};
+			name = Release;
+		};
+		188100362DBB9D3A003322F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewisestudios.VoyageCabinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoyageCabin;
+			};
+			name = Debug;
+		};
+		188100372DBB9D3A003322F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BY6KKAKCW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewisestudios.VoyageCabinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoyageCabin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1881002D2DBB9D3A003322F2 /* Build configuration list for PBXNativeTarget "VoyageCabin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1881002E2DBB9D3A003322F2 /* Debug */,
+				1881002F2DBB9D3A003322F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		188100322DBB9D3A003322F2 /* Build configuration list for PBXNativeTarget "VoyageCabinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188100332DBB9D3A003322F2 /* Debug */,
+				188100342DBB9D3A003322F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		188100352DBB9D3A003322F2 /* Build configuration list for PBXNativeTarget "VoyageCabinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188100362DBB9D3A003322F2 /* Debug */,
+				188100372DBB9D3A003322F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1881FFFF2DBB9D30003322F2 /* Build configuration list for PBXProject "VoyageCabin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188100302DBB9D3A003322F2 /* Debug */,
+				188100312DBB9D3A003322F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1881FFFC2DBB9D30003322F2 /* Project object */;
+}
