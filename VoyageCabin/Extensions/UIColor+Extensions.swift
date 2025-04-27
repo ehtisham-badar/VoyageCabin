@@ -10,18 +10,18 @@ import UIKit
 extension UIColor{
     
     static var appColor: UIColor?{
-        return hexStringToUIColor(hex: "015AA5")
+        return hexStringToUIColor(hex: "369FFF")
     }
-    static var textGreyColor: UIColor? {
-        return hexStringToUIColor(hex: "9CA3AF")
-    }
-    
-    static var greenColor: UIColor? {
-        return hexStringToUIColor(hex: "0EAD69")
+    static var textCharcoalColor: UIColor? {
+        return hexStringToUIColor(hex: "1A1A1A")
     }
     
-    static var redColor: UIColor? {
-        return hexStringToUIColor(hex: "EB5757")
+    static var gradient1color: UIColor? {
+        return hexStringToUIColor(hex: "#7AC0FF")
+    }
+    
+    static var gradient2color: UIColor? {
+        return hexStringToUIColor(hex: "#369FFF")
     }
     static var greenLightColor: UIColor? {
         return hexStringToUIColor(hex: "D9F2D9")
