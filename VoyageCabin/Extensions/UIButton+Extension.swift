@@ -1,10 +1,11 @@
 //
-//  UiviewExtensions.swift
+//  UIButton+Extension.swift
 //  VoyageCabin
 //
-//  Created by APPLE on 25/04/2025.
+//  Created by APPLE on 27/04/2025.
 //
 
+import Foundation
 import UIKit
 
 extension UIButton {
