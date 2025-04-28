@@ -67,5 +67,10 @@ extension SelectOnboardingViewController: UITableViewDelegate, UITableViewDataSo
             print("Selected status: \(status.rawValue)")
         }
         tableView.reloadData()
+        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: SelectUrgencyViewController.self)) as? SelectUrgencyViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

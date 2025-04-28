@@ -1,19 +1,19 @@
 //
-//  SelectUrgencyViewController.swift
+//  FindListingViewController.swift
 //  VoyageCabin
 //
-//  Created by APPLE on 27/04/2025.
+//  Created by APPLE on 28/04/2025.
 //
 
 import UIKit
 
-class SelectUrgencyViewController: UIViewController {
+class FindListingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var list: [UrgencyStatus] = [UrgencyStatus]()
-    var imageArray = ["immediate","withinmonth","justbrowsing"]
+    var list: [ListingStatus] = [ListingStatus]()
+    var imageArray = ["privateroom","entireproperty","studentaccomodation","hostfamilystay"]
     var selectedState: [Bool] = []
-    var selectedStatus: UrgencyStatus?
+    var selectedStatus: ListingStatus?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class SelectUrgencyViewController: UIViewController {
     }
     
     func setView(){
-        list = [.immediately, .withinmonth, .justbrowsing]
+        list = [.privaterooms, .entireproperty, .studentacc, .hostfamily]
         selectedState = Array(repeating: false, count: list.count)
     }
     
@@ -35,7 +35,7 @@ class SelectUrgencyViewController: UIViewController {
     }
 }
 
-extension SelectUrgencyViewController: UITableViewDelegate, UITableViewDataSource {
+extension FindListingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
@@ -68,7 +68,7 @@ extension SelectUrgencyViewController: UITableViewDelegate, UITableViewDataSourc
         }
         tableView.reloadData()
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: FindListingViewController.self)) as? FindListingViewController else {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: FindPropertyAdViewController.self)) as? FindPropertyAdViewController else {
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)

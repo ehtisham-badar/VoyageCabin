@@ -11,6 +11,7 @@ class GetStartedViewController: UIViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnGetStarted: UIButton!
+    @IBOutlet weak var getStartedView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class GetStartedViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func onClickLogin(_ sender: Any) {
+        
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: AuthController.self)) as? AuthController else {
             return

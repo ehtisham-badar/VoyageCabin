@@ -30,4 +30,20 @@ enum Utils {
         
         return combined
     }
+    
+    static func attributedString(fullText: String,
+                                 coloredPart: String,
+                                 color: UIColor,
+                                 font: UIFont) -> NSAttributedString {
+        
+        let attributedString = NSMutableAttributedString(string: fullText)
+        
+        attributedString.addAttribute(.font, value: font, range: NSRange(location: 0, length: fullText.count))
+        let range = (fullText as NSString).range(of: coloredPart)
+        if range.location != NSNotFound {
+            attributedString.addAttribute(.foregroundColor, value: color, range: range)
+        }
+        
+        return attributedString
+    }
 }
