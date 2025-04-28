@@ -23,7 +23,11 @@ class GetStartedViewController: UIViewController {
         lblTitle.attributedText = Utils.styledText(firstString: "Welcome to", secondString: "Voyage Cabin", font: UIFont.plusJakartaSansBold(size: 42)!)
     }
     @IBAction func onClickGetStarted(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: SelectOnboardingViewController.self)) as? SelectOnboardingViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func onClickLogin(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
