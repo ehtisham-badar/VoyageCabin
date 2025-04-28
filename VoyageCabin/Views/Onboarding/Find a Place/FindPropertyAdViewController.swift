@@ -20,4 +20,11 @@ class FindPropertyAdViewController: UIViewController {
     func setView(){
         lblTitle.attributedText = Utils.attributedString(fullText: "Find Your \n Ideal Property \n Faster & Smarter \n with Insights", coloredPart: "Faster & Smarter", color: UIColor.appColor!, font: UIFont.plusJakartaSansBold(size: 32)!)
     }
+    @IBAction func onCliclkContinue(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: HearAboutUsViewController.self)) as? HearAboutUsViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

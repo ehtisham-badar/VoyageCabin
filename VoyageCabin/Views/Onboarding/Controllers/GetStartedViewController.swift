@@ -10,7 +10,6 @@ import UIKit
 class GetStartedViewController: UIViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var btnGetStarted: UIButton!
     @IBOutlet weak var getStartedView: UIView!
     
     override func viewDidLoad() {
@@ -19,8 +18,8 @@ class GetStartedViewController: UIViewController {
     }
     
     func setView() {
-        btnGetStarted.cornerRadius = btnGetStarted.frame.height/2
-        btnGetStarted.applyLinearGradient(color1: UIColor.gradient1color!, color2: UIColor.gradient2color!)
+        getStartedView.cornerRadius = getStartedView.frame.height/2
+//        getStartedView.applyLinearGradient(color1: UIColor.gradient1color!, color2: UIColor.gradient2color!)
         lblTitle.attributedText = Utils.styledText(firstString: "Welcome to", secondString: "Voyage Cabin", font: UIFont.plusJakartaSansBold(size: 42)!)
     }
     @IBAction func onClickGetStarted(_ sender: Any) {

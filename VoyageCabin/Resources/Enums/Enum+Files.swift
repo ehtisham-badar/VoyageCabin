@@ -24,3 +24,27 @@ enum ListingStatus: String {
     case studentacc = "Student Accommodation"
     case hostfamily = "Host-family stay"
 }
+
+enum HearAbout: String {
+    case insta = "Instagram"
+    case tiktok = "TikTok"
+    case facebook = "Facebook"
+    case google = "Google Search"
+    case appstore = "App Store"
+    case friendsorfamily = "Friends or Family"
+}
+
+enum ChoosePlace: String {
+    case budget = "Budget"
+    case location = "Location"
+    case lifestyle = "Lifestyle match"
+    case furnished = "Furnished vs. Unfurnished"
+    case closeto = "Close to transport"
+}
+
+enum SelectAge: String {
+    case a_18_24 = "18-24"
+    case a_25_34 = "25-34"
+    case a_35_44 = "35-44"
+    case a_45_plus = "45+"
+}
