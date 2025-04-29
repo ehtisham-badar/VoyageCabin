@@ -1,5 +1,5 @@
 //
-//  SelectAgeViewController.swift
+//  ChallengeViewController.swift
 //  VoyageCabin
 //
 //  Created by APPLE on 28/04/2025.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-class SelectAgeViewController: UIViewController {
+class ChallengeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var list: [SelectAge] = [SelectAge]()
+    var list: [FindChallenge] = [FindChallenge]()
+    var imageArray = ["notresponse","myprofile","uncertain","overwhelm"]
     var selectedState: [Bool] = []
-    var selectedStatus: SelectAge?
+    var selectedStatus: FindChallenge?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class SelectAgeViewController: UIViewController {
     }
     
     func setView(){
-        list = [.a_18_24, .a_25_34, .a_35_44, .a_45_plus]
+        list = [.notgetting, .myprofile, .uncertain, .overwhelm]
         selectedState = Array(repeating: false, count: list.count)
     }
     
@@ -32,9 +33,16 @@ class SelectAgeViewController: UIViewController {
     @IBAction func onClickBackButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func onClickContinue(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: PersonalizeViewController.self)) as? PersonalizeViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
-extension SelectAgeViewController: UITableViewDelegate, UITableViewDataSource {
+extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
@@ -45,7 +53,7 @@ extension SelectAgeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.selectionStyle = .none
         cell.lblSelection.text = list[indexPath.row].rawValue
-        cell.selectionIcon.isHidden = true
+        cell.selectionIcon.image = UIImage(named: imageArray[indexPath.row])
         if selectedState[indexPath.row] {
             cell.selectUnselecticon.image = UIImage.selecticon
         } else {
@@ -66,10 +74,5 @@ extension SelectAgeViewController: UITableViewDelegate, UITableViewDataSource {
             print("Selected status: \(status.rawValue)")
         }
         tableView.reloadData()
-        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: WeeklyBudgetViewController.self)) as? WeeklyBudgetViewController else {
-            return
-        }
-        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

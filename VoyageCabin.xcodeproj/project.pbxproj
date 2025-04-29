@@ -208,6 +208,9 @@
 			);
 			mainGroup = 1881FFFB2DBB9D2F003322F2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1807F9212DBFFBF60058E6AE /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 188100052DBB9D30003322F2 /* Products */;
 			projectDirPath = "";
@@ -581,6 +584,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1807F9212DBFFBF60058E6AE /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/luispadron/UICircularProgressRing.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 1881FFFC2DBB9D30003322F2 /* Project object */;
 }

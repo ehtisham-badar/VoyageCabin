@@ -48,3 +48,17 @@ enum SelectAge: String {
     case a_35_44 = "35-44"
     case a_45_plus = "45+"
 }
+
+enum WeeklyBudget: String {
+    case under200 = "Under $200"
+    case w_200_350 = "$200 - $350"
+    case w_350_500 = "$350 - $500"
+    case w_500_plus = "$500 +"
+}
+
+enum FindChallenge: String {
+    case notgetting = "Not getting enough responses"
+    case myprofile = "My profile gets lost in search results"
+    case uncertain = "Uncertain who is interested in my profile"
+    case overwhelm = "Overwhelmed by too many listings"
+}
