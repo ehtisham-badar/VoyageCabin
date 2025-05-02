@@ -14,6 +14,7 @@ class SelectUrgencyViewController: UIViewController {
     var imageArray = ["immediate","withinmonth","justbrowsing"]
     var selectedState: [Bool] = []
     var selectedStatus: UrgencyStatus?
+    var selectedFlow: HouseSearchStatus?
     
     override func viewDidLoad() {
         super.viewDidLoad()

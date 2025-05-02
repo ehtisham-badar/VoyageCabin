@@ -62,3 +62,8 @@ enum FindChallenge: String {
     case uncertain = "Uncertain who is interested in my profile"
     case overwhelm = "Overwhelmed by too many listings"
 }
+
+enum HadTrouble: String {
+    case no = "No"
+    case yes = "Yes"
+}

@@ -1,19 +1,19 @@
 //
-//  SelectOnboardingViewController.swift
+//  HadTroubleViewController.swift
 //  VoyageCabin
 //
-//  Created by APPLE on 27/04/2025.
+//  Created by APPLE on 29/04/2025.
 //
 
 import UIKit
 
-class SelectOnboardingViewController: UIViewController {
+class HadTroubleViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var list: [HouseSearchStatus] = [HouseSearchStatus]()
-    var imageArray = ["homeicon","homemateicon"]
+    var list: [HadTrouble] = [HadTrouble]()
+    var imageArray = ["noicon","yesicon"]
     var selectedState: [Bool] = []
-    var selectedStatus: HouseSearchStatus?
+    var selectedStatus: HadTrouble?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class SelectOnboardingViewController: UIViewController {
     }
     
     func setView(){
-        list = [.lookingForAPlace, .needAHousemate]
+        list = [.no, .yes]
         selectedState = Array(repeating: false, count: list.count)
     }
     
@@ -35,7 +35,7 @@ class SelectOnboardingViewController: UIViewController {
     }
 }
 
-extension SelectOnboardingViewController: UITableViewDelegate, UITableViewDataSource {
+extension HadTroubleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
@@ -63,30 +63,12 @@ extension SelectOnboardingViewController: UITableViewDelegate, UITableViewDataSo
         }
         selectedStatus = list[indexPath.row]
         selectedState[indexPath.row] = true
-        tableView.reloadData()
         if let status = selectedStatus {
             print("Selected status: \(status.rawValue)")
-            Constants.selectedStatus = status
-            switch status {
-            case .lookingForAPlace:
-                navigatetourgency()
-            case .needAHousemate:
-                navigatetofindlisting()
-            }
         }
-        
-        
-    }
-    func navigatetourgency(){
+        tableView.reloadData()
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: SelectUrgencyViewController.self)) as? SelectUrgencyViewController else {
-            return
-        }
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    func navigatetofindlisting(){
-        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: FindListingViewController.self)) as? FindListingViewController else {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: SelectAgeViewController.self)) as? SelectAgeViewController else {
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)

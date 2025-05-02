@@ -66,10 +66,19 @@ extension SelectAgeViewController: UITableViewDelegate, UITableViewDataSource {
             print("Selected status: \(status.rawValue)")
         }
         tableView.reloadData()
-        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: WeeklyBudgetViewController.self)) as? WeeklyBudgetViewController else {
-            return
+        if Constants.selectedStatus == .lookingForAPlace {
+            let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: WeeklyBudgetViewController.self)) as? WeeklyBudgetViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: OnboardingAdViewController.self)) as? OnboardingAdViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 }

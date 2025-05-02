@@ -67,10 +67,19 @@ extension ChoosePlaceViewController: UITableViewDelegate, UITableViewDataSource 
             print("Selected status: \(status.rawValue)")
         }
         tableView.reloadData()
-        let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: SelectAgeViewController.self)) as? SelectAgeViewController else {
-            return
+        if Constants.selectedStatus == .lookingForAPlace {
+            let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: SelectAgeViewController.self)) as? SelectAgeViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: HadTroubleViewController.self)) as? HadTroubleViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
