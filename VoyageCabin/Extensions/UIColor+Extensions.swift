@@ -35,8 +35,8 @@ extension UIColor{
         return hexStringToUIColor(hex: "015AA5")
     }
     
-    static var greyColor: UIColor? {
-        return hexStringToUIColor(hex: "808080")
+    static var greyStrokeColor: UIColor? {
+        return hexStringToUIColor(hex: "#D9D9D9")
     }
     static var orangeColor: UIColor? {
         return hexStringToUIColor(hex: "FFA500")

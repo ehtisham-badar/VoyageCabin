@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import FirebaseCore
+import GoogleSignIn
+import FirebaseAuth
+//import FBSDKLoginKit
+import AuthenticationServices
 
 class AuthController: UIViewController {
-    
     @IBOutlet weak var lblTermsPrivacy: UILabel!
     
     override func viewDidLoad() {
@@ -60,5 +64,56 @@ class AuthController: UIViewController {
         } else {
             print("unidentified")
         }
+    }
+    @IBAction func continuewithApple(_ sender: Any) {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+    }
+    @IBAction func continuewithFacebook(_ sender: Any) {
+        
+    }
+    @IBAction func continuewithGoogle(_ sender: Any) {
+        signInWithGoogle()
+    }
+    func signInWithGoogle() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        let config = GIDConfiguration(clientID: clientID)
+        
+        GIDSignIn.sharedInstance.configuration = config
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
+            guard error == nil else { return }
+            guard let signInResult = signInResult else { return }
+            
+            let user = signInResult.user
+            let idToken = user.idToken
+            
+            let accessToken = user.accessToken
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken?.tokenString ?? "", accessToken: accessToken.tokenString)
+            
+            let emailAddress = user.profile?.email
+            
+            let fullName = user.profile?.name ?? ""
+            print(fullName)
+            let givenName = user.profile?.givenName
+            let familyName = user.profile?.familyName
+            
+            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+            let username = (givenName ?? "") + (familyName ?? "")
+            
+        }
+    }
+    
+}
+
+extension AuthController: ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        ASPresentationAnchor()
     }
 }

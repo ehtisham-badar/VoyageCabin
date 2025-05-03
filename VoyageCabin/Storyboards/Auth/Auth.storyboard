@@ -83,12 +83,23 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-QC-arY">
+                                                <rect key="frame" x="0.0" y="0.0" width="392" height="50"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="continuewithApple:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="REg-Vo-bAV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="SeR-QC-arY" secondAttribute="bottom" id="7eG-hx-yto"/>
                                             <constraint firstItem="xfO-m0-dJO" firstAttribute="centerX" secondItem="mFi-lY-Y4T" secondAttribute="centerX" id="Gba-bt-D78"/>
+                                            <constraint firstItem="SeR-QC-arY" firstAttribute="leading" secondItem="mFi-lY-Y4T" secondAttribute="leading" id="S37-LM-GvG"/>
                                             <constraint firstAttribute="height" constant="50" id="iRW-Xg-wgp"/>
                                             <constraint firstItem="xfO-m0-dJO" firstAttribute="centerY" secondItem="mFi-lY-Y4T" secondAttribute="centerY" id="vaM-rj-O6n"/>
+                                            <constraint firstAttribute="trailing" secondItem="SeR-QC-arY" secondAttribute="trailing" id="w98-j2-Ypc"/>
+                                            <constraint firstItem="SeR-QC-arY" firstAttribute="top" secondItem="mFi-lY-Y4T" secondAttribute="top" id="yqN-RB-TGC"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -113,12 +124,23 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmL-Og-qTB">
+                                                <rect key="frame" x="0.0" y="0.0" width="392" height="50"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="continuewithFacebook:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h4y-KB-gq8"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.36078431372549019" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NmL-Og-qTB" secondAttribute="bottom" id="JB7-66-Ns5"/>
+                                            <constraint firstItem="NmL-Og-qTB" firstAttribute="top" secondItem="Zmf-bZ-p4E" secondAttribute="top" id="Kpf-hQ-Bwl"/>
+                                            <constraint firstAttribute="trailing" secondItem="NmL-Og-qTB" secondAttribute="trailing" id="YtE-IC-xbd"/>
                                             <constraint firstAttribute="height" constant="50" id="dkL-ix-3I5"/>
                                             <constraint firstItem="pdd-FW-5Ab" firstAttribute="centerY" secondItem="Zmf-bZ-p4E" secondAttribute="centerY" id="dlW-Sm-DAe"/>
                                             <constraint firstItem="pdd-FW-5Ab" firstAttribute="centerX" secondItem="Zmf-bZ-p4E" secondAttribute="centerX" id="xDI-LP-Caj"/>
+                                            <constraint firstItem="NmL-Og-qTB" firstAttribute="leading" secondItem="Zmf-bZ-p4E" secondAttribute="leading" id="zVw-Gm-w8c"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -143,10 +165,21 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-Xa-0oy">
+                                                <rect key="frame" x="0.0" y="0.0" width="392" height="50"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="continuewithGoogle:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gW3-fj-c2w"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="SHP-Pl-6Iw" firstAttribute="centerY" secondItem="R7a-qc-JRv" secondAttribute="centerY" id="O0d-XW-Ss6"/>
+                                            <constraint firstAttribute="bottom" secondItem="cgl-Xa-0oy" secondAttribute="bottom" id="R5b-8D-s4m"/>
+                                            <constraint firstAttribute="trailing" secondItem="cgl-Xa-0oy" secondAttribute="trailing" id="TbJ-Aa-kWt"/>
+                                            <constraint firstItem="cgl-Xa-0oy" firstAttribute="top" secondItem="R7a-qc-JRv" secondAttribute="top" id="ToG-2e-SQ3"/>
+                                            <constraint firstItem="cgl-Xa-0oy" firstAttribute="leading" secondItem="R7a-qc-JRv" secondAttribute="leading" id="Xaa-kl-tjM"/>
                                             <constraint firstItem="SHP-Pl-6Iw" firstAttribute="centerX" secondItem="R7a-qc-JRv" secondAttribute="centerX" id="ri0-Hd-4Np"/>
                                             <constraint firstAttribute="height" constant="50" id="tdN-QZ-d71"/>
                                         </constraints>
@@ -193,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="-17"/>
+            <point key="canvasLocation" x="15" y="-20"/>
         </scene>
     </scenes>
     <resources>
