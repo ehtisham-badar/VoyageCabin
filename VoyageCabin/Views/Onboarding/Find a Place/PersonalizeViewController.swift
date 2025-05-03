@@ -35,8 +35,16 @@ class PersonalizeViewController: UIViewController {
             if self.currentProgress >= 1.0 {
                 self.timer?.invalidate()
                 self.timer = nil
+                self.loadingDidComplete()
             }
         }
+    }
+    func loadingDidComplete() {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: AuthController.self)) as? AuthController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func onClickBack(_ sender: Any) {
