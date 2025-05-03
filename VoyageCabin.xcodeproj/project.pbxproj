@@ -11,6 +11,7 @@
 		182F5CE32DC551CD0029F3FC /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 182F5CE22DC551CD0029F3FC /* FirebaseCore */; };
 		182F5CE72DC553DF0029F3FC /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 182F5CE62DC553DF0029F3FC /* FirebaseMessaging */; };
 		182F5CEA2DC554780029F3FC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 182F5CE92DC554780029F3FC /* GoogleSignIn */; };
+		184FBD882DC68998007C498E /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 184FBD872DC68998007C498E /* CropViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 				182F5CE72DC553DF0029F3FC /* FirebaseMessaging in Frameworks */,
 				182F5CEA2DC554780029F3FC /* GoogleSignIn in Frameworks */,
 				182F5CE32DC551CD0029F3FC /* FirebaseCore in Frameworks */,
+				184FBD882DC68998007C498E /* CropViewController in Frameworks */,
 				182F5CE12DC551CD0029F3FC /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +142,7 @@
 				182F5CE22DC551CD0029F3FC /* FirebaseCore */,
 				182F5CE62DC553DF0029F3FC /* FirebaseMessaging */,
 				182F5CE92DC554780029F3FC /* GoogleSignIn */,
+				184FBD872DC68998007C498E /* CropViewController */,
 			);
 			productName = VoyageCabin;
 			productReference = 188100042DBB9D30003322F2 /* VoyageCabin.app */;
@@ -227,6 +230,7 @@
 				1807F9212DBFFBF60058E6AE /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
 				182F5CDD2DC54D850029F3FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				182F5CE82DC554780029F3FC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				184FBD862DC68998007C498E /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 188100052DBB9D30003322F2 /* Products */;
@@ -627,6 +631,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		184FBD862DC68998007C498E /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -649,6 +661,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 182F5CE82DC554780029F3FC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		184FBD872DC68998007C498E /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 184FBD862DC68998007C498E /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

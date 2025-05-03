@@ -81,6 +81,8 @@ class AuthController: UIViewController {
         signInWithGoogle()
     }
     func signInWithGoogle() {
+        self.navigateToProfile()
+        return
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         
         let config = GIDConfiguration(clientID: clientID)
@@ -106,8 +108,17 @@ class AuthController: UIViewController {
             
             let profilePicUrl = user.profile?.imageURL(withDimension: 320)
             let username = (givenName ?? "") + (familyName ?? "")
+            self.navigateToProfile()
             
         }
+    }
+    
+    func navigateToProfile() {
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ProfileViewController.self)) as? ProfileViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

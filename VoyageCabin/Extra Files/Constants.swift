@@ -9,4 +9,5 @@ import Foundation
 
 class Constants{
     static var selectedStatus: HouseSearchStatus?
+    static var APP_NAME = "Voyage Cabin"
 }

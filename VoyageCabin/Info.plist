@@ -11,23 +11,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>PlusJakartaSans-Bold.ttf</string>
-		<string>PlusJakartaSans-BoldItalic.ttf</string>
-		<string>PlusJakartaSans-ExtraBold.ttf</string>
-		<string>PlusJakartaSans-ExtraBoldItalic.ttf</string>
-		<string>PlusJakartaSans-ExtraLight.ttf</string>
-		<string>PlusJakartaSans-ExtraLightItalic.ttf</string>
-		<string>PlusJakartaSans-Italic.ttf</string>
-		<string>PlusJakartaSans-Light.ttf</string>
-		<string>PlusJakartaSans-LightItalic.ttf</string>
-		<string>PlusJakartaSans-Medium.ttf</string>
-		<string>PlusJakartaSans-MediumItalic.ttf</string>
-		<string>PlusJakartaSans-Regular.ttf</string>
-		<string>PlusJakartaSans-SemiBold.ttf</string>
-		<string>PlusJakartaSans-SemiBoldItalic.ttf</string>
-	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -47,5 +30,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Voyage Cabin wants to use camera for capturing image</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Voyage Cabin wants to use photo library for capturing image</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Voyage Cabin wants to use photo library for capturing image</string>
 </dict>
 </plist>
