@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addDoneOnTF()
+//        addDoneOnTF()
         setupDatePicker()
         updateFinishBtn()
     }
