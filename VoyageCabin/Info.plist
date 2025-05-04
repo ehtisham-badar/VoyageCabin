@@ -2,23 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>PlusJakartaSans-Bold</string>
-		<string>PlusJakartaSans-BoldItalic</string>
-		<string>PlusJakartaSans-ExtraBold</string>
-		<string>PlusJakartaSans-ExtraBoldItalic</string>
-		<string>PlusJakartaSans-ExtraLight</string>
-		<string>PlusJakartaSans-ExtraLightItalic</string>
-		<string>PlusJakartaSans-Light</string>
-		<string>PlusJakartaSans-Italic</string>
-		<string>PlusJakartaSans-LightItalic</string>
-		<string>PlusJakartaSans-Medium</string>
-		<string>PlusJakartaSans-MediumItalic</string>
-		<string>PlusJakartaSans-MediumItalic</string>
-		<string>PlusJakartaSans-SemiBold</string>
-		<string>PlusJakartaSans-SemiBoldItalic</string>
-	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -27,6 +10,27 @@
 				<string>com.googleusercontent.apps.278050473619-kihbou275boi0m4skt8elqr7t321jjt8</string>
 			</array>
 		</dict>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PlusJakartaSans-Bold.ttf</string>
+		<string>PlusJakartaSans-BoldItalic.ttf</string>
+		<string>PlusJakartaSans-ExtraBold.ttf</string>
+		<string>PlusJakartaSans-ExtraBoldItalic.ttf</string>
+		<string>PlusJakartaSans-ExtraLight.ttf</string>
+		<string>PlusJakartaSans-ExtraLightItalic.ttf</string>
+		<string>PlusJakartaSans-Light.ttf</string>
+		<string>PlusJakartaSans-Italic.ttf</string>
+		<string>PlusJakartaSans-LightItalic.ttf</string>
+		<string>PlusJakartaSans-Medium.ttf</string>
+		<string>PlusJakartaSans-MediumItalic.ttf</string>
+		<string>PlusJakartaSans-SemiBold.ttf</string>
+		<string>PlusJakartaSans-SemiBoldItalic.ttf</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>google</string>
+		<string>com.google.gpp.signin</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

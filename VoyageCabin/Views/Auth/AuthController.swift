@@ -81,44 +81,47 @@ class AuthController: UIViewController {
         handleSignInButton()
     }
     func handleSignInButton() {
-//        guard Utils.isInternetAvailable() else {
-//            self.alert(title: "Error", message: "No Internet Available")
-//            return
-//        }
-
+        guard Utils.isInternetAvailable() else {
+            self.alert(title: "Error", message: "No Internet Available")
+            return
+        }
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-
+        
         let config = GIDConfiguration(clientID: clientID)
+        
         GIDSignIn.sharedInstance.configuration = config
-
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
-            if let error = error {
-                print("🔴 Google Sign-In failed:", error.localizedDescription)
-                return
-            }
-
-            guard let user = signInResult?.user,
-                  let idToken = user.idToken?.tokenString else {
-                print("❌ Missing user or ID token")
-                return
-            }
-
-            let accessToken = user.accessToken.tokenString
-
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
-
+            guard error == nil else { return }
+            guard let signInResult = signInResult else { return }
+            
+            let user = signInResult.user
+            let idToken = user.idToken
+            
+            let accessToken = user.accessToken
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken?.tokenString ?? "", accessToken: accessToken.tokenString)
+            
+            let emailAddress = user.profile?.email
+            
+            let fullName = user.profile?.name
+            print(fullName ?? "")
+            let givenName = user.profile?.givenName
+            let familyName = user.profile?.familyName
+            
+            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+            let username = (givenName ?? "") + (familyName ?? "")
+            
             Auth.auth().signIn(with: credential) { result, error in
-                if let error = error {
-                    print("🔴 Firebase sign-in failed:", error.localizedDescription)
-                } else {
-                    print("✅ Firebase user:", result?.user.email ?? "")
-                    // navigateToHome() or navigateToProfile()
+                if error == nil{
+                    print(result ?? "")
+                    
+                }else{
+                    print(error?.localizedDescription ?? "")
                 }
             }
         }
     }
 
-    
     func createProfile(from user: GIDGoogleUser) -> Profile {
         let fullName = user.profile?.name ?? ""
         let givenName = user.profile?.givenName ?? ""
