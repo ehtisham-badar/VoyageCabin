@@ -66,6 +66,10 @@ class AuthController: UIViewController {
         }
     }
     @IBAction func continuewithApple(_ sender: Any) {
+        guard Utils.isInternetAvailable() else {
+            self.alert(title: "Error", message: "No Internet Available")
+            return
+        }
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
         
@@ -114,14 +118,14 @@ class AuthController: UIViewController {
             Auth.auth().signIn(with: credential) { result, error in
                 if error == nil{
                     print(result ?? "")
-                    
+                    self.navigateToProfile()
                 }else{
                     print(error?.localizedDescription ?? "")
                 }
             }
         }
     }
-
+    
     func createProfile(from user: GIDGoogleUser) -> Profile {
         let fullName = user.profile?.name ?? ""
         let givenName = user.profile?.givenName ?? ""

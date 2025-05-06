@@ -31,8 +31,8 @@ class GetStartedViewController: UIViewController {
     }
     @IBAction func onClickLogin(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: AuthController.self)) as? AuthController else {
+        let storyboard = UIStoryboard(name: "Renter", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ListRenterViewController.self)) as? ListRenterViewController else {
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)
