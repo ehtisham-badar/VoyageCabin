@@ -26,27 +26,11 @@ extension UIColor{
     static var greenLightColor: UIColor? {
         return hexStringToUIColor(hex: "D9F2D9")
     }
-    
-    static var redLightColor: UIColor? {
-        return hexStringToUIColor(hex: "F2D9D9")
-    }
-    
-    static var sideBlueColor: UIColor? {
-        return hexStringToUIColor(hex: "015AA5")
-    }
-    
     static var greyStrokeColor: UIColor? {
         return hexStringToUIColor(hex: "#D9D9D9")
     }
-    static var orangeColor: UIColor? {
-        return hexStringToUIColor(hex: "FFA500")
-    }
-    
-    static var disablecolor: UIColor? {
-        return hexStringToUIColor(hex: "B7B7B7")
-    }
-    static var BLUECOLOR: UIColor? {
-        return hexStringToUIColor(hex: "11CDCD")
+    static var labeBlueColor: UIColor? {
+        return hexStringToUIColor(hex: "#5F7593")
     }
     
     static func hexStringToUIColor (hex:String, opacity: Double = 1.0) -> UIColor {

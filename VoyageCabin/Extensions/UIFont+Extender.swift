@@ -64,4 +64,39 @@ extension UIFont {
     static func plusJakartaSansSemiBoldItalic(size: CGFloat) -> UIFont? {
         return UIFont(name: "PlusJakartaSans-SemiBoldItalic", size: size)
     }
+    static func lexend100Thin(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-Thin", size: size)
+    }
+    
+    static func lexend200ExtraLight(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-ExtraLight", size: size)
+    }
+    
+    static func lexend300Light(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-Light", size: size)
+    }
+    
+    static func lexend400Regular(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-Regular", size: size)
+    }
+    
+    static func lexend500Medium(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-Medium", size: size)
+    }
+    
+    static func lexend600SemiBold(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-SemiBold", size: size)
+    }
+    
+    static func lexend700Bold(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-Bold", size: size)
+    }
+    
+    static func lexend800ExtraBold(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-ExtraBold", size: size)
+    }
+    
+    static func lexend900Black(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Lexend-Black", size: size)
+    }
 }
