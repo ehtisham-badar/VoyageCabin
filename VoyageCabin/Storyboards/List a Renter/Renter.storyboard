@@ -9,11 +9,6 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="TimesNewRoman.ttf">
-            <string>.SFUI-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--List Renter View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -904,7 +899,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="onClickNext:" destination="JA9-Qw-e2N" eventType="touchUpInside" id="I9h-mw-FP8"/>
+                                                    <action selector="onClickNext:" destination="rVy-Qu-YWB" eventType="touchUpInside" id="zD2-YI-TAv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1067,14 +1062,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifestyle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yD-rZ-Jdy">
-                                <rect key="frame" x="175.33333333333334" y="208" width="42.666666666666657" height="13.333333333333343"/>
-                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="12"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yD-rZ-Jdy">
+                                <rect key="frame" x="160" y="208" width="73.333333333333314" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Lifestyle">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="PlusJakartaSans-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PYb-ZE-pbm">
-                                <rect key="frame" x="24" y="245.33333333333334" width="345" height="410.66666666666663"/>
+                                <rect key="frame" x="24" y="255" width="345" height="401"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="0.0" id="TXQ-0Y-p7e">
                                     <size key="itemSize" width="128" height="128"/>

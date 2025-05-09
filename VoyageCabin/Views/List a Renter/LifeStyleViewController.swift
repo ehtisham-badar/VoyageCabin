@@ -12,13 +12,12 @@ class LifeStyleViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let statusOptions = [
-        "Working Full Time",
-        "Working Part Time",
-        "Working Holiday",
-        "Retired",
-        "Unemployed",
-        "Backpacker",
-        "Student"
+        "Smokers",
+        "LGBTQIA+",
+        "Pets",
+        "Children",
+        "FIFO",
+        "Drinks"
     ]
     var selectedIndex = -1
     
@@ -61,7 +60,7 @@ extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: SelectionCollectionViewCell.self), for: indexPath) as? SelectionCollectionViewCell else { return UICollectionViewCell() }
-        cell.iconImage.image = UIImage(named: "iconps\(indexPath.item + 1)")
+        cell.iconImage.image = UIImage(named: "iconls\(indexPath.item + 1)")
         cell.lblTitle.text = statusOptions[indexPath.item]
         if selectedIndex == indexPath.item {
             cell.mainView.borderColor = UIColor.appColor

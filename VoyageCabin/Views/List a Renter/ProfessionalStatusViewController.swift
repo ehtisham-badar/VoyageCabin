@@ -46,6 +46,13 @@ class ProfessionalStatusViewController: UIViewController {
             layout.invalidateLayout()
         }
     }
+    @IBAction func onClickNext(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Renter", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: LifeStyleViewController.self)) as? LifeStyleViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func registerNibs(){
         collectionView.delegate = self
