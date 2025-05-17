@@ -14,10 +14,14 @@ import AuthenticationServices
 
 class AuthController: UIViewController {
     @IBOutlet weak var lblTermsPrivacy: UILabel!
+    @IBOutlet weak var backView: UIView!
+    
+    var shouldBackViewHide = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTermsPrivacyLabel()
+        backView.isHidden = shouldBackViewHide
     }
     @IBAction func onClickBackButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -37,6 +41,7 @@ class AuthController: UIViewController {
         attributedString.addAttribute(.foregroundColor, value: UIColor.textPrimary, range: fullRange)
         
         // Set color for "Term of Service" and "Privacy Policy"
+        attributedString.addAttribute(.font, value: UIFont.plusJakartaSansRegular(size: 10)!, range: fullRange)
         attributedString.addAttribute(.foregroundColor, value: UIColor.appColor!, range: termsRange)
         attributedString.addAttribute(.foregroundColor, value: UIColor.appColor!, range: privacyRange)
         
@@ -104,7 +109,8 @@ class AuthController: UIViewController {
             let accessToken = user.accessToken
             
             let credential = GoogleAuthProvider.credential(withIDToken: idToken?.tokenString ?? "", accessToken: accessToken.tokenString)
-            
+            print(idToken?.tokenString)
+            print(accessToken.tokenString)
             let emailAddress = user.profile?.email
             
             let fullName = user.profile?.name
@@ -141,8 +147,8 @@ class AuthController: UIViewController {
     }
     
     func navigateToProfile() {
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ProfileViewController.self)) as? ProfileViewController else {
+        let storyboard = UIStoryboard(name: "Renter", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: AboutYouViewController.self)) as? AboutYouViewController else {
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)
@@ -154,4 +160,33 @@ extension AuthController: ASAuthorizationControllerDelegate,ASAuthorizationContr
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         ASPresentationAnchor()
     }
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            
+            // Access the identity token (JWT)
+            if let identityTokenData = appleIDCredential.identityToken,
+               let identityTokenString = String(data: identityTokenData, encoding: .utf8) {
+                
+                print("✅ Identity Token (JWT): \(identityTokenString)")
+                
+                // You can now send this token to your backend server for verification
+            } else {
+                print("❌ Failed to retrieve identity token")
+            }
+            
+            // You can also access other fields:
+            let userIdentifier = appleIDCredential.user
+            let email = appleIDCredential.email
+            let fullName = appleIDCredential.fullName
+            
+            print("User ID: \(userIdentifier)")
+            print("Email: \(email ?? "no email")")
+            print("Full name: \(fullName?.givenName ?? "") \(fullName?.familyName ?? "")")
+        }
+    }
+
+       
+       func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+           print("❌ Error: \(error.localizedDescription)")
+       }
 }

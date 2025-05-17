@@ -12,6 +12,7 @@
 		182F5CE72DC553DF0029F3FC /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 182F5CE62DC553DF0029F3FC /* FirebaseMessaging */; };
 		182F5CEA2DC554780029F3FC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 182F5CE92DC554780029F3FC /* GoogleSignIn */; };
 		184FBD882DC68998007C498E /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 184FBD872DC68998007C498E /* CropViewController */; };
+		187E98792DCFE2C400A64D1A /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 187E98782DCFE2C400A64D1A /* GoogleMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 			files = (
 				182F5CE72DC553DF0029F3FC /* FirebaseMessaging in Frameworks */,
 				182F5CEA2DC554780029F3FC /* GoogleSignIn in Frameworks */,
+				187E98792DCFE2C400A64D1A /* GoogleMaps in Frameworks */,
 				182F5CE32DC551CD0029F3FC /* FirebaseCore in Frameworks */,
 				184FBD882DC68998007C498E /* CropViewController in Frameworks */,
 				182F5CE12DC551CD0029F3FC /* FirebaseAuth in Frameworks */,
@@ -143,6 +145,7 @@
 				182F5CE62DC553DF0029F3FC /* FirebaseMessaging */,
 				182F5CE92DC554780029F3FC /* GoogleSignIn */,
 				184FBD872DC68998007C498E /* CropViewController */,
+				187E98782DCFE2C400A64D1A /* GoogleMaps */,
 			);
 			productName = VoyageCabin;
 			productReference = 188100042DBB9D30003322F2 /* VoyageCabin.app */;
@@ -231,6 +234,7 @@
 				182F5CDD2DC54D850029F3FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				182F5CE82DC554780029F3FC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				184FBD862DC68998007C498E /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				187E98772DCFE2C400A64D1A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 188100052DBB9D30003322F2 /* Products */;
@@ -317,6 +321,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoyageCabin/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voyage Cabin";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Voyage Cabin wants to use camera for capturing image";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Voyage Cabin wants to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Voyage Cabin wants to access your location";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Voyage Cabin wants to use photo library for capturing image";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Voyage Cabin wants to use photo library for capturing image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Onboard;
@@ -327,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.voyage.cabin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voyagecabin.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -350,6 +359,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VoyageCabin/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voyage Cabin";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Voyage Cabin wants to use camera for capturing image";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Voyage Cabin wants to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Voyage Cabin wants to access your location";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Voyage Cabin wants to use photo library for capturing image";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Voyage Cabin wants to use photo library for capturing image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Onboard;
@@ -360,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.voyage.cabin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voyagecabin.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -639,6 +653,14 @@
 				minimumVersion = 2.7.4;
 			};
 		};
+		187E98772DCFE2C400A64D1A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -666,6 +688,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 184FBD862DC68998007C498E /* XCRemoteSwiftPackageReference "TOCropViewController" */;
 			productName = CropViewController;
+		};
+		187E98782DCFE2C400A64D1A /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 187E98772DCFE2C400A64D1A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

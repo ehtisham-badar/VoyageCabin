@@ -63,7 +63,8 @@ extension SelectAgeViewController: UITableViewDelegate, UITableViewDataSource {
         selectedStatus = list[indexPath.row]
         selectedState[indexPath.row] = true
         if let status = selectedStatus {
-            print("Selected status: \(status.rawValue)")
+            Constants.lookingForAPlaceBody.age_range = status.rawValue
+            Constants.lookingForHousemate.age_range = status.rawValue
         }
         tableView.reloadData()
         if Constants.selectedStatus == .lookingForAPlace {

@@ -51,6 +51,16 @@ class LifeStyleViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: String(describing: SelectionCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: SelectionCollectionViewCell.self))
     }
+    @IBAction func onClickNext(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Renter", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: WriteNotesViewController.self)) as? WriteNotesViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func onClickBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension LifeStyleViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

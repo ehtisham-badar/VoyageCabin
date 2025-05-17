@@ -9,7 +9,8 @@ import Foundation
 
 enum HouseSearchStatus: String {
     case lookingForAPlace = "I’m looking for a place"
-    case needAHousemate = "I need a housemate"
+    case needAHousemate = "I need a housemate or roommate"
+    case listAProperty = "I want to list a property"
 }
 
 enum UrgencyStatus: String {

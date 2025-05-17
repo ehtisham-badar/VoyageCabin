@@ -64,7 +64,8 @@ extension FindListingViewController: UITableViewDelegate, UITableViewDataSource 
         selectedStatus = list[indexPath.row]
         selectedState[indexPath.row] = true
         if let status = selectedStatus {
-            print("Selected status: \(status.rawValue)")
+            Constants.lookingForAPlaceBody.type_of_listing = status.rawValue
+            Constants.lookingForHousemate.type_of_listing = status.rawValue
         }
         tableView.reloadData()
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)

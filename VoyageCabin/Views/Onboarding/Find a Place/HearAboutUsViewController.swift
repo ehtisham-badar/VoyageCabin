@@ -64,7 +64,8 @@ extension HearAboutUsViewController: UITableViewDelegate, UITableViewDataSource 
         selectedStatus = list[indexPath.row]
         selectedState[indexPath.row] = true
         if let status = selectedStatus {
-            print("Selected status: \(status.rawValue)")
+            Constants.lookingForAPlaceBody.where_did_you_hear = status.rawValue
+            Constants.lookingForHousemate.where_did_you_hear = status.rawValue
         }
         tableView.reloadData()
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)

@@ -64,7 +64,7 @@ extension HadTroubleViewController: UITableViewDelegate, UITableViewDataSource {
         selectedStatus = list[indexPath.row]
         selectedState[indexPath.row] = true
         if let status = selectedStatus {
-            print("Selected status: \(status.rawValue)")
+            Constants.lookingForHousemate.had_trouble = status.rawValue.lowercased() == "Yes".lowercased() ? true : false
         }
         tableView.reloadData()
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)

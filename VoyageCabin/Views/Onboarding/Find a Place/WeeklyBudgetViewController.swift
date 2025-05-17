@@ -63,7 +63,7 @@ extension WeeklyBudgetViewController: UITableViewDelegate, UITableViewDataSource
         selectedStatus = list[indexPath.row]
         selectedState[indexPath.row] = true
         if let status = selectedStatus {
-            print("Selected status: \(status.rawValue)")
+            Constants.lookingForAPlaceBody.weekly_budget = status.rawValue
         }
         tableView.reloadData()
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)

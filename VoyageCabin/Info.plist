@@ -7,10 +7,22 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.278050473619-kihbou275boi0m4skt8elqr7t321jjt8</string>
+				<string>com.googleusercontent.apps.278050473619-pmed7tgb3eognq4jfqs6b2o4rtpap695</string>
 			</array>
 		</dict>
 	</array>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>google</string>
+		<string>com.google.gpp.signin</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>PlusJakartaSans-Bold.ttf</string>
@@ -27,16 +39,8 @@
 		<string>PlusJakartaSans-SemiBold.ttf</string>
 		<string>PlusJakartaSans-SemiBoldItalic.ttf</string>
 	</array>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>google</string>
-		<string>com.google.gpp.signin</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -56,13 +60,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Voyage Cabin wants to use camera for capturing image</string>
-	<key>FirebaseAppDelegateProxyEnabled</key>
-	<false/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Voyage Cabin wants to use photo library for capturing image</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Voyage Cabin wants to use photo library for capturing image</string>
 </dict>
 </plist>

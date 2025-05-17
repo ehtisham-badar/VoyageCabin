@@ -17,6 +17,12 @@ extension UIColor{
     static var unSelectIcon: UIImage?{
         return UIImage(named: "unselecticon")
     }
+    static var selectIconRectangle: UIImage?{
+        return UIImage(named: "tickr")
+    }
+    static var unSelectIconRectangle: UIImage?{
+        return UIImage(named: "untickr")
+    }
 }
 
 extension UIImage {

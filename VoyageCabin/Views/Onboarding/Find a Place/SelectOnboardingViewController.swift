@@ -11,7 +11,7 @@ class SelectOnboardingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var list: [HouseSearchStatus] = [HouseSearchStatus]()
-    var imageArray = ["homeicon","homemateicon"]
+    var imageArray = ["homeicon","homemateicon","listprop"]
     var selectedState: [Bool] = []
     var selectedStatus: HouseSearchStatus?
     
@@ -22,7 +22,7 @@ class SelectOnboardingViewController: UIViewController {
     }
     
     func setView(){
-        list = [.lookingForAPlace, .needAHousemate]
+        list = [.lookingForAPlace, .needAHousemate,.listAProperty]
         selectedState = Array(repeating: false, count: list.count)
     }
     
@@ -71,6 +71,8 @@ extension SelectOnboardingViewController: UITableViewDelegate, UITableViewDataSo
             case .lookingForAPlace:
                 navigatetourgency()
             case .needAHousemate:
+                return
+            case .listAProperty:
                 navigatetofindlisting()
             }
         }

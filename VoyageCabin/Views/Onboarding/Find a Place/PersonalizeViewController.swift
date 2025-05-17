@@ -17,6 +17,7 @@ class PersonalizeViewController: UIViewController {
     var timer: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
+        completeOnboarding()
         updateProgress(to: 0)
         startLoading()
         manload.image = UIImage.gif(name: "manload")
@@ -44,7 +45,26 @@ class PersonalizeViewController: UIViewController {
         guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: AuthController.self)) as? AuthController else {
             return
         }
+        vc.shouldBackViewHide = true
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func completeOnboarding(){
+        let lookingForAPlaceBody = Constants.lookingForAPlaceBody
+        let lookingForHouseMateBody = Constants.lookingForHousemate
+        APIManager.shared.postData(endpoint: Constants.selectedStatus == .lookingForAPlace ? .property_seeker_onboarding : .property_lister_onboarding, requestBody: Constants.selectedStatus == .lookingForAPlace ? lookingForAPlaceBody : lookingForHouseMateBody, viewController: self) { (code, result: APIResult<ResultResponse>) in
+            switch result {
+            case .success(_):
+                DispatchQueue.main.async {
+                    if code == 200 {
+                        
+                    }else {
+                        AlertManager.shared.showAlert(on: self, message: "Failed", actionText: "OK") {}
+                    }
+                }
+            case .failure(_):
+                AlertManager.shared.showAlert(on: self, message: "Failed", actionText: "OK") {}
+            }
+        }
     }
     
     @IBAction func onClickBack(_ sender: Any) {

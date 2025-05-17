@@ -65,7 +65,7 @@ extension SelectUrgencyViewController: UITableViewDelegate, UITableViewDataSourc
         selectedStatus = list[indexPath.row]
         selectedState[indexPath.row] = true
         if let status = selectedStatus {
-            print("Selected status: \(status.rawValue)")
+            Constants.lookingForAPlaceBody.urgency = status.rawValue
         }
         tableView.reloadData()
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)

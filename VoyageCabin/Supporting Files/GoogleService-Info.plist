@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>278050473619-kihbou275boi0m4skt8elqr7t321jjt8.apps.googleusercontent.com</string>
+	<string>278050473619-pmed7tgb3eognq4jfqs6b2o4rtpap695.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.278050473619-kihbou275boi0m4skt8elqr7t321jjt8</string>
+	<string>com.googleusercontent.apps.278050473619-pmed7tgb3eognq4jfqs6b2o4rtpap695</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBhiuMzq2jhvK3Kp4-QsBPJ4-yQzQLn4o8</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.voyage.cabin</string>
+	<string>com.voyagecabin.app</string>
 	<key>PROJECT_ID</key>
 	<string>voyagecabin</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:278050473619:ios:52b7902cb0e2e08df26f66</string>
+	<string>1:278050473619:ios:550258b06b7a32ddf26f66</string>
 </dict>
 </plist>

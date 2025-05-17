@@ -13,6 +13,7 @@ class ChallengeViewController: UIViewController {
     var list: [FindChallenge] = [FindChallenge]()
     var imageArray = ["notresponse","myprofile","uncertain","overwhelm"]
     var selectedState: [Bool] = []
+    var selectedArray = [String]()
     var selectedStatus: FindChallenge?
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class ChallengeViewController: UIViewController {
     
     func setView(){
         list = [.notgetting, .myprofile, .uncertain, .overwhelm]
+        selectedArray = Array(repeating: "", count: list.count) // ← remove if unnecessary
         selectedState = Array(repeating: false, count: list.count)
     }
     
@@ -34,6 +36,10 @@ class ChallengeViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func onClickContinue(_ sender: Any) {
+        navigateToPersonalizeScreen()
+    }
+    
+    func navigateToPersonalizeScreen(){
         let storyboard = UIStoryboard(name: "Onboard", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: PersonalizeViewController.self)) as? PersonalizeViewController else {
             return
@@ -55,9 +61,9 @@ extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.lblSelection.text = list[indexPath.row].rawValue
         cell.selectionIcon.image = UIImage(named: imageArray[indexPath.row])
         if selectedState[indexPath.row] {
-            cell.selectUnselecticon.image = UIImage.selecticon
+            cell.selectUnselecticon.image = UIImage.tickr
         } else {
-            cell.selectUnselecticon.image = UIImage.unselecticon
+            cell.selectUnselecticon.image = UIImage.untickr
         }
         return cell
     }
@@ -65,14 +71,22 @@ extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        for i in 0..<selectedState.count {
-            selectedState[i] = false
+        selectedState[indexPath.row].toggle()
+        let selectedItem = list[indexPath.row].rawValue
+        if selectedState[indexPath.row] {
+            if !selectedArray.contains(selectedItem) {
+                selectedArray.append(selectedItem)
+            }
+        } else {
+            if let index = selectedArray.firstIndex(of: selectedItem) {
+                selectedArray.remove(at: index)
+            }
         }
-        selectedStatus = list[indexPath.row]
-        selectedState[indexPath.row] = true
-        if let status = selectedStatus {
-            print("Selected status: \(status.rawValue)")
-        }
-        tableView.reloadData()
+
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+
+        print("Selected Items: \(selectedArray)")
+        Constants.lookingForAPlaceBody.biggest_challenge = selectedArray
+        Constants.lookingForHousemate.biggest_challenge = selectedArray
     }
 }
